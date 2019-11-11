@@ -1,11 +1,11 @@
 <view>
-  <scroll-view scroll-y="true">
-    <view class='toptext'>
-      <span class='edittext' wx:if="{{isShow}}" catchtap='adminTap'>
-        <i-icon type="brush_fill" /> 编辑商品</span>
-      <span class='edittext' wx:else catchtap='adminTap'>
-        <i-icon type="success_fill" /> 完成编辑</span>
-    </view>
+  <view class='toptext'>
+    <span class='edittext' wx:if="{{isShow}}" catchtap='adminTap'>
+      <i-icon type="brush_fill" /> 编辑商品</span>
+    <span class='edittext' wx:else catchtap='adminTap'>
+      <i-icon type="success_fill" /> 完成编辑</span>
+  </view>
+  <scroll-view scroll-y>
     <view class='box' wx:for='{{data}}' wx:key='index'>
       <div class='rightbox'>
         <van-card num="{{item.quantity}}" tag="" price="{{(item.price - item.discountValue) /100}}" desc="{{item.title}}" title="{{item.name}}" thumb="{{item.image[0]}}" custom-class='bgccolor'>
