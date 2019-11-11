@@ -1,0 +1,103 @@
+page {
+  background-color: #fff;
+}
+
+.box {
+  width: 100%;
+  height: 250rpx;
+  margin-bottom: 20rpx;
+}
+
+.rightbox {
+  float: right;
+  background-color: #fafafa;
+  width: 95%;
+  height: 250rpx;
+}
+
+.leftbox {
+  width: 5%;
+  float: right;
+  background-color: #fafafa;
+  height: 250rpx;
+  position: relative;
+}
+
+.checkboxbtn {
+  position: absolute;
+  top: 39%;
+  right: -12%;
+}
+
+.all {
+  position: absolute;
+  left: 20rpx;
+  top: 40rpx;
+}
+
+.moneytext {
+  color: #ee0a24;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.pricetext {
+  display: inline-block;
+  margin-left: 213rpx;
+  margin-top: 34rpx;
+   font-size: 26rpx;
+}
+
+.bombtn {
+  background-color: #fafafa !important;
+}
+
+.toptext {
+  height: 60rpx;
+  background-color: #fafafa;
+  line-height: 60rpx;
+  margin-bottom: 10rpx;
+}
+
+.edittext {
+  font-size: 30rpx;
+  display: inline-block;
+  float: right;
+  padding-right: 20rpx;
+}
+
+.discount {
+  position: absolute;
+  right: 315rpx;
+  bottom: 20rpx;
+}
+
+.bottombox {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 110rpx;
+  background-color: #fafafa;
+}
+
+.alltext {
+  position: absolute;
+  top: 43rpx;
+  left: 67rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
+.goprice {
+  font-size: 30rpx;
+  position: absolute;
+  width: 232rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  right: 15rpx;
+  top: 22rpx;
+  border-radius: 40rpx;
+  background-color: #f55;
+  color: #fff;
+}

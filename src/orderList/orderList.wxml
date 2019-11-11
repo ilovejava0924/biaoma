@@ -1,0 +1,12 @@
+<view class="page">
+  <scroll-view scroll-y>
+    <view wx:for="{{list}}" wx:key="item._id">
+      <i-card title="订单信息" extra="{{item.ctime}}">
+        <view slot="content">购买人姓名： {{item.buyerName}}</view>
+        <view slot="content">购买人手机号： {{item.buyerMobile}}</view>
+        <view slot="content">地址： {{item.state}}{{item.city}}{{item.district}}{{item.address}}</view>
+        <view slot="content">订单状态： {{item.orderStates}}</view>
+      </i-card>
+    </view>
+  </scroll-view>
+</view>

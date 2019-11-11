@@ -1,0 +1,114 @@
+page {
+  background-color: #f8f8f8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+
+.page-section {
+  width: 100%;
+  height: 750rpx;
+  background: #fff;
+}
+
+.nav-box-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  margin-bottom: 30rpx;
+}
+
+button:last-child {
+  margin-bottom: 0;
+}
+
+.page-section-title {
+  padding: 0;
+}
+
+swiper {
+  height: 100%;
+}
+
+.swiper-item {
+  display: block;
+}
+
+.quanity {
+  font-size: 14px;
+  height: 2.57rem;
+  margin-left: 0.8rem;
+  line-height: 2.6rem;
+}
+
+.message {
+  font-size: 14px;
+  margin-left: 0.8rem;
+  color: red;
+}
+
+i-input-number {
+  display: inline-block;
+}
+
+picker {
+  font-size: 14px;
+  height: 2.57rem;
+  margin-left: 0.8rem;
+  line-height: 2.6rem;
+}
+
+.info {
+  font-size: 28rpx;
+  height: 2.57rem;
+  margin-left: 0.8rem;
+  line-height: 2.6rem;
+}
+
+.info-title {
+  margin-right: 1rem;
+  display: block;
+  width: 120rpx;
+  float: left;
+}
+
+.info-content {
+  display: block;
+  width: 560rpx;
+  float: right;
+}
+
+.info-discountContent {
+  text-decoration: line-through;
+}
+
+.info-showContent {
+  display: none;
+}
+
+.bottomA {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  opacity: 1;
+  width: 100%;
+}
+
+i-button {
+  width: 50%;
+}
+
+.bottomB {
+  margin-bottom: 176px;
+}
+
+.app {
+  width: 100%;
+}

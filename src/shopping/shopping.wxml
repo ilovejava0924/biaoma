@@ -1,0 +1,45 @@
+<view class="page">
+  <view wx:if="{{types==1}}">
+    <i-panel title="填写信息" class='bottomB'>
+      <view class="quanity" wx:if="{{types==0}}">
+        <span style="margin-right: 1rem;">数量选择</span>
+        <i-input-number value="{{ goodsQuanity }}" min="1" max="1000" bindchange="quanityChange" />
+      </view>
+      <view class="message" wx:if='{{showss}}'>
+        <span style="margin-right: 1rem;">购买单件需支付8元运费,部分地区运费可能存在差异</span>
+      </view>
+      <i-input value="{{ name }}" title="收货人1111" bind:change="changeName" maxlength="100" placeholder="请输入姓名" />
+      <i-input value="{{ tel }}" type="number" title="联系电话" bind:change="changeTel" maxlength="11" placeholder="请输入手机号" />
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          <span style="margin-right: 1rem;">地区选择</span>
+          <span>{{region[0]}}，{{region[1]}}，{{region[2]}}</span>
+        </view>
+      </picker>
+      <i-input value="{{ address }}" title="详细地址" bind:change="changeAddress" maxlength="100" placeholder="请输入详细地址" />
+    </i-panel>
+    <i-button type="success" bind:click="handleBuy" size="small">确定</i-button>
+  </view>
+  <view wx:else>
+    <i-panel title="填写信息" class='bottomB'>
+      <view class="quanity" wx:if="{{types==0}}">
+        <span style="margin-right: 1rem;">数量选择</span>
+        <i-input-number value="{{ goodsQuanity }}" min="1" max="1000" bindchange="quanityChange" />
+      </view>
+      <view class="message" wx:if="{{goodsQuanity==1}}">
+        <span style="margin-right: 1rem;">购买单件需支付8元运费,部分地区运费可能存在差异</span>
+      </view>
+      <i-input value="{{ name }}" title="收货人" bind:change="changeName" maxlength="100" placeholder="请输入姓名" />
+      <i-input value="{{ tel }}" type="number" title="联系电话" bind:change="changeTel" maxlength="11" placeholder="请输入手机号" />
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          <span style="margin-right: 1rem;">地区选择</span>
+          <span>{{region[0]}}，{{region[1]}}，{{region[2]}}</span>
+        </view>
+      </picker>
+      <i-input value="{{ address }}" title="详细地址" bind:change="changeAddress" maxlength="100" placeholder="请输入详细地址" />
+    </i-panel>
+    <i-button type="success" bind:click="handleBuy" size="small">确定</i-button>
+  </view>
+
+</view>

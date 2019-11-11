@@ -1,0 +1,45 @@
+<view>
+  <scroll-view scroll-y="true">
+    <view class='toptext'>
+      <span class='edittext' wx:if="{{isShow}}" catchtap='adminTap'>
+        <i-icon type="brush_fill" /> 编辑商品</span>
+      <span class='edittext' wx:else catchtap='adminTap'>
+        <i-icon type="success_fill" /> 完成编辑</span>
+    </view>
+    <view class='box' wx:for='{{data}}' wx:key='index'>
+      <div class='rightbox'>
+        <van-card num="{{item.quantity}}" tag="" price="{{(item.price - item.discountValue) /100}}" desc="{{item.title}}" title="{{item.name}}" thumb="{{item.image[0]}}" custom-class='bgccolor'>
+          <view slot="footer">
+            <van-tag type="danger" custom-class='discount'> {{item.discountValue > 0 ? '折扣价' : '热卖'}}</van-tag>
+            <i-input-number value="{{ item.quantity }}" min="1" max="100" bindchange="numberchange" data-id="{{item.goodsId}}" />
+          </view>
+        </van-card>
+      </div>
+      <div class='leftbox'>
+        <van-checkbox value="{{ item.checked }}" bind:change="onChange" data-id="{{item._id}}" custom-class='checkboxbtn' icon-size='18px' checked-color="#fd5454"></van-checkbox>
+      </div>
+    </view>
+  </scroll-view>
+  <!-- 底部固定栏 -->
+  <view class='bottombox'>
+    <view wx:if="{{isShow}}">
+      <van-checkbox value="{{ checkeds }}" bind:change="clickAll" custom-class='all' checked-color="#fd5454"></van-checkbox>
+      <span class='alltext'>全选</span>
+      <span class='pricetext'>合计：
+        <p class='moneytext'>￥{{totalPrice/100}}</p>
+      </span>
+      <Button class='goprice' bindtap="onClickButton">去结算 ({{num}})</Button>
+    </view>
+
+    <view wx:else>
+      <van-checkbox value="{{ checkeds }}" bind:change="clickAll" custom-class='all' checked-color="#fd5454"></van-checkbox>
+      <span class='alltext'>全选</span>
+      <span class='pricetext'>合计：
+        <p class='moneytext'>￥{{totalPrice/100}}</p>
+      </span>
+      <Button class='goprice' bindtap="deleteBtn">删除</Button>
+    </view>
+
+  </view>
+  <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+</view>

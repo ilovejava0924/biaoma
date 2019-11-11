@@ -1,0 +1,25 @@
+{
+  "navigationBarTitleText": "购物车",
+  "usingComponents": {
+    "i-button": "../../dist/button/index",
+    "i-input": "../../dist/input/index",
+    "i-panel": "../../dist/panel/index",
+    "i-modal": "../../dist/modal/index",
+    "i-card": "../../dist/card/index",
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-input-number": "../../dist/input-number/index",
+    "van-card": "../../miniprogram_npm/vant-weapp/card/index",
+    "van-button": "../../miniprogram_npm/vant-weapp/button/index",
+    "van-collapse": "../../miniprogram_npm/vant-weapp/collapse/index",
+    "van-checkbox": "../../miniprogram_npm/vant-weapp/checkbox/index",
+    "van-checkbox-group": "../../miniprogram_npm/vant-weapp/checkbox-group/index",
+    "van-submit-bar": "../../miniprogram_npm/vant-weapp/submit-bar/index",
+    "i-toast": "../../dist/toast/index",
+    "i-spin": "../../dist/spin/index",
+    "i-icon": "../../dist/icon/index",
+    "van-tag": "../../miniprogram_npm/vant-weapp/tag/index"
+  }
+}

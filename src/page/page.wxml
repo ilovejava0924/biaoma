@@ -1,0 +1,75 @@
+<view class="page">
+  <scroll-view scroll-y>
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" class='nav-box-swiper'>
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <image bindload="{{idx == 0 ? 'imageLoad' : ''}}" src="{{item}}" class="slide-image " data-src='{{item}}' data-list='{{item}}' bindtap="previewImage" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='hot'>
+      <div class='left' wx:if="{{discountValue>0}}">
+        <span class='price'>
+          <span class='yan'>￥</span>{{(price - discountValue) / 100}} </span>
+        <span class='prices'>
+          <span class='yans'>￥</span>{{price/ 100}}</span>
+      </div>
+      <div class='left' wx:if="{{discountValue<=0}}">
+        <span class='price'>
+          <span class='yan'>￥</span>{{price/ 100}} </span>
+      </div>
+      <div class='right'>
+        <!-- <span class='text1'>新鲜供货</span> -->
+        <span class='text2'>{{hotText}}</span>
+      </div>
+    </view>
+    <view class='share'>
+      <div class='shareLeft'>
+        <span class='shareText1'>{{goodsName}}</span>
+        <span class='shareText2'> {{desc}}</span>
+      </div>
+      <div class='shareRight'>
+        <button open-type='share' class='noborder'>
+          <i-icon type="share" size="28" />
+          <div class='textShare'>分享</div>
+        </button>
+      </div>
+    </view>
+    <view class='sell'>
+      <div class='sellLeft'>
+        <span class='sellNumber'>预览人数：{{virtualTodayBrowse}}/人</span>
+        <span class='consigner'> 发货：{{shipmentsText}}</span>
+      </div>
+      <div class='sellRight'>
+        <div class='out'>已售：{{virtualTotalBuyAmount}}/份</div>
+      </div>
+    </view>
+
+
+    <!-- 详情图片 -->
+    <view class="page-sections">
+      <span class='details'> 详情介绍</span>
+      <block wx:for="{{detailImage}}" wx:key="*this">
+        <image src="{{item}}" mode='widthFix' style='width:100%' />
+      </block>
+    </view>
+    <view class='bottombox'>
+
+      <van-goods-action>
+        <van-goods-action-icon icon="chat-o" text="客服" bind:click="service" />
+        <van-goods-action-icon icon="todo-list-o" text="查看订单" bind:click="handleOrder" />
+        <van-goods-action-button text="加入购物车" type="warning" bind:click="goShoppingCart" />
+        <van-goods-action-button text="立即购买" bind:click="handleBuy" />
+      </van-goods-action>
+    </view>
+  </scroll-view>
+  <i-modal title="客服小姐姐专属微信号(点击即可复制)" visible="{{ service }}" bind:ok="handleClose1" bind:cancel="handleClose1">
+    <view>
+      <p class='wxhtext'  bindtap="serviceWxh1"  >{{serviceWxh1}}</p>
+      <p class='wxhtext'  bindtap="serviceWxh2"  >{{serviceWxh2}}</p>
+    </view>
+  </i-modal>
+  <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+</view>
